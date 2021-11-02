@@ -22,10 +22,19 @@ import {Provider as PaperProvider, Appbar} from 'react-native-paper';
 const App: () => Node = () => {
   return (
     <PaperProvider>
+      <ScrollView>
+        <Text style={styles.TitolRoig}>Benvinguts a React Native</Text>
+        <Text style={styles.TitolBlau}>
+          Este serà el segon exercici que fem.
+        </Text>
+        <Text style={styles.FontNormal}>normal</Text>
+        <Text style={styles.FontNotoserif}>notoserif</Text>
+        <Text style={{fontFamily: 'sans-serif', fontSize: 20}}>sans-serif</Text>
+      </ScrollView>
       <Appbar style={styles.bottom}>
         <Appbar.Action
           icon="archive"
-          onPress={() => console.log('Pressed archive')}
+          onPress={() => alert('Pressed archive')}
         />
         <Appbar.Action
           icon="mail"
@@ -40,16 +49,6 @@ const App: () => Node = () => {
           onPress={() => console.log('Pressed delete')}
         />
       </Appbar>
-      <StatusBar barStyle="#222" />
-      <ScrollView>
-        <Text style={styles.TitolRoig}>Benvinguts a React Native</Text>
-        <Text style={styles.TitolBlau}>
-          Este serà el primer exercici que fem.
-        </Text>
-        <Text style={styles.FontNormal}>normal</Text>
-        <Text style={styles.FontNotoserif}>notoserif</Text>
-        <Text style={{fontFamily: 'sans-serif', fontSize: 20}}>sans-serif</Text>
-      </ScrollView>
     </PaperProvider>
   );
 };
