@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
   FontNotoserif: {
     fontFamily: 'notoserif',
     fontSize: 20,
-  }
+  },
 });
 
 export default App;
